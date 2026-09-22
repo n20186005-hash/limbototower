@@ -4,14 +4,20 @@
 export type Locale = "id" | "en";
 
 export const siteName = "Menara Keagungan Limboto Guide";
-export const mapHref =
-  "https://www.google.com/maps/search/?api=1&query=Menara%20Keagungan%20Limboto%2C%20Gorontalo%2C%20Indonesia";
+export const siteUrl = "https://limbototower.com";
+export const mapsShareUrl = "https://maps.app.goo.gl/M5UJnygnGbkTTB3W9";
+export const govTourismUrl = "https://gorontaloprov.go.id";
+export const mapHref = mapsShareUrl;
 
 export const copy = {
   id: {
     nav: { about: "Tentang", visit: "Rencanakan kunjungan", nearby: "Sekitar menara", map: "Peta", faq: "FAQ" },
     language: "English",
     languageShort: "EN",
+    documentTitle: "Menara Keagungan Limboto di Limboto — Panduan Wisata",
+    metaDescription:
+      "Panduan pengunjung independen untuk Menara Keagungan Limboto (Menara Limboto / Limboto Tower) di Gorontalo: lokasi peta, akses transportasi, Taman Menara Limboto, suasana malam hari, Danau Limboto, dan tips berkunjung.",
+    breadcrumb: { landmark: "Menara Keagungan Limboto", city: "Limboto", region: "Kabupaten Gorontalo", country: "Indonesia" },
     eyebrow: "Panduan pengunjung independen · Limboto, Gorontalo",
     heroTitle: "Menara Keagungan,\nsebuah titik orientasi Limboto.",
     heroBody:
@@ -27,7 +33,7 @@ export const copy = {
     introKicker: "01 / Membaca landmark",
     introTitle: "Sebuah menara di pusat administrasi Kabupaten Gorontalo.",
     introBody:
-      "Menara Keagungan Limboto—yang juga dikenal sebagai Pakaya Tower—adalah penanda visual di Limboto, pusat pemerintahan Kabupaten Gorontalo. Struktur menara terbuka, gerbang di bawahnya, dan taman di sekitarnya menjadikannya tempat yang mudah dikenali untuk orientasi kota dan kunjungan singkat.",
+      "Menara Keagungan Limboto—yang juga dikenal sebagai Pakaya Tower, dan dalam sumber berbahasa Inggris umum disebut Limboto Tower—adalah penanda visual di Kayubulan, Kecamatan Limboto, pusat pemerintahan Kabupaten Gorontalo, Provinsi Gorontalo, Indonesia. Struktur menara terbuka, gerbang di bawahnya, dan taman di sekitarnya menjadikannya tempat yang mudah dikenali untuk orientasi kota dan kunjungan singkat.",
     introNote:
       "Catatan sumber: identitas, alamat, penilaian, dan status kunjungan dapat berubah. Gunakan tautan peta langsung sebelum berangkat.",
     sourceLink: "Lihat tempat di Google Maps",
@@ -83,7 +89,8 @@ export const copy = {
     nearbyTitle: "Susun kunjungan sebagai rute kota, bukan daftar belanja.",
     nearby: [
       { title: "Ruang publik & landmark", body: "Taman Menara Limboto dan ruang kota di sekelilingnya dapat menjadi titik istirahat singkat sebelum melanjutkan perjalanan." },
-      { title: "Danau Limboto", body: "Danau Limboto berada dalam lanskap Kabupaten Gorontalo dan dapat dipertimbangkan sebagai bagian dari rute yang lebih luas. Periksa akses dan kondisi cuaca." },
+      { title: "Danau Limboto", body: "Saat berkunjung ke Menara Keagungan Limboto, pengunjung dapat melanjutkan ke Danau Limboto—landmark alam utama Kabupaten Gorontalo—sebagai bagian dari rute yang lebih luas. Periksa akses dan kondisi cuaca." },
+      { title: "Benteng Otanaha & kawasan Kota Gorontalo", body: "Di kawasan Kota Gorontalo, sekitar 20 km dari menara, terdapat Benteng Otanaha serta situs sejarah kota yang dapat dipadukan dalam rute satu hari. Konfirmasikan jam kunjungan dan akses melalui sumber resmi sebelum berangkat." },
       { title: "Makan, belanja, dan kebutuhan jalan", body: "Di sekitar kawasan kota, cari jenis layanan yang Anda perlukan—warung, restoran sederhana, toko kebutuhan, ATM, SPBU, atau pengisian daya—tanpa rekomendasi usaha tertentu." },
       { title: "Menginap", body: "Pilih tipe akomodasi di Limboto atau Gorontalo sesuai rute Anda. Bandingkan lokasi, kebijakan, dan transportasi sendiri sebelum memesan." },
     ],
@@ -91,16 +98,22 @@ export const copy = {
     mapTitle: "Mulai dari lokasi yang tepat.",
     mapBody: "Peta interaktif menggunakan tampilan Bahasa Indonesia. Untuk pembaruan lalu lintas, jam buka, dan petunjuk langkah demi langkah, buka Google Maps langsung.",
     mapAction: "Lihat di Google Maps",
+    mapOfficialNote:
+      "Untuk pembaruan resmi dan informasi pariwisata daerah, kunjungi portal resmi Pemerintah Provinsi Gorontalo.",
+    mapOfficialLink: "Portal resmi Provinsi Gorontalo",
+    officialFooter: "Portal resmi Gorontalo",
     faqKicker: "08 / Pertanyaan umum",
     faqTitle: "Jawaban singkat untuk hal yang paling sering ditanyakan.",
     faq: [
-      { q: "Apa nama lain Menara Keagungan Limboto?", a: "Di beberapa sumber dan papan informasi, tempat ini juga dikenal sebagai Pakaya Tower atau Menara Pakaya." },
+      { q: "Apa nama lain Menara Keagungan Limboto?", a: "Di beberapa sumber dan papan informasi, tempat ini juga dikenal sebagai Limboto Tower, Pakaya Tower, atau Menara Pakaya." },
+      { q: "Di mana lokasi Menara Keagungan Limboto?", a: "Menara berada di Jl. Baso Bobihoe No.308, Kayubulan, Kecamatan Limboto, Kabupaten Gorontalo, Provinsi Gorontalo 96214, Indonesia, di koordinat 0.6269984° LU, 122.9773079° BT." },
       { q: "Apa yang diketahui tentang sejarah menara?", a: "Riwayat pembangunan 2002 dan peresmian 2003 dicatat dalam artikel Wikipedia bahasa Indonesia. Pengelolaan serta fasilitasnya terus berkembang; untuk konteks terkini kami merujuk pada pengumuman Pemerintah Kabupaten Gorontalo tahun 2026." },
       { q: "Apakah ada biaya masuk?", a: "Kami tidak menemukan tarif tetap dari sumber publik yang cukup stabil untuk dicantumkan. Konfirmasikan langsung sebelum berkunjung." },
       { q: "Kapan waktu berkunjung yang disarankan?", a: "Pagi atau menjelang sore biasanya lebih nyaman untuk ruang luar. Pencahayaan malam menjadi daya tarik yang sering disebut dalam informasi peta, tetapi akses perlu Anda konfirmasi pada hari kunjungan." },
       { q: "Apakah tersedia toilet dan parkir?", a: "Kondisi fasilitas dan kapasitas dapat berubah. Gunakan parkir yang ditandai dan tanyakan kondisi toilet atau aksesibilitas kepada petugas di lokasi." },
       { q: "Bagaimana cara menuju lokasi dengan angkutan umum?", a: "Halaman trayek Dishub Provinsi Gorontalo memuat koneksi menuju Terminal Limboto dan Kayubulan. Konfirmasikan jadwal, ongkos, titik turun, dan sambungan terakhir di terminal atau operator pada hari perjalanan." },
       { q: "Bagaimana cara menuju lokasi dari bandara?", a: "Dari Bandara Djalaluddin, lanjutkan perjalanan darat menuju Limboto dengan taksi bandara berizin, transfer yang dipesan, atau kendaraan sewaan. Konfirmasikan titik jemput dan perjalanan kembali sebelum berangkat." },
+      { q: "Apa saja landmark di sekitar menara?", a: "Sekitar Menara Keagungan Limboto, pengunjung dapat melanjutkan ke Danau Limboto, Benteng Otanaha di Kota Gorontalo, serta ruang publik Taman Menara Limboto di sekitar kawasan." },
     ],
     footerTitle: "Menara Keagungan Limboto Guide",
     footerStatement: "Situs ini adalah proyek panduan pengunjung independen dan nirlaba; situs ini tidak berafiliasi dengan lembaga pemerintah atau pengelola resmi mana pun.",
@@ -123,6 +136,10 @@ export const copy = {
     nav: { about: "About", visit: "Plan a visit", nearby: "Around the tower", map: "Map", faq: "FAQ" },
     language: "Bahasa Indonesia",
     languageShort: "ID",
+    documentTitle: "Menara Keagungan Limboto in Limboto — Travel Guide",
+    metaDescription:
+      "Discover Menara Limboto (Limboto Tower) in Gorontalo, Indonesia: map location, transport access, Taman Menara Limboto, night lighting, nearby Lake Limboto, and visitor tips.",
+    breadcrumb: { landmark: "Menara Keagungan Limboto", city: "Limboto", region: "Gorontalo Regency", country: "Indonesia" },
     eyebrow: "Independent visitor guide · Limboto, Gorontalo",
     heroTitle: "Menara Keagungan,\na point of orientation in Limboto.",
     heroBody: "An open guide to Menara Keagungan Limboto—access, facilities and city context—presented as practical, neutral visitor information.",
@@ -136,7 +153,7 @@ export const copy = {
     updated: "Google Maps listing checked 20 August 2026",
     introKicker: "01 / Reading the landmark",
     introTitle: "A tower at the administrative heart of Gorontalo Regency.",
-    introBody: "Menara Keagungan Limboto—also known as Pakaya Tower—is a visual landmark in Limboto, the administrative centre of Gorontalo Regency. Its open tower structure, archway and surrounding park make it an easy reference point for a short city visit.",
+    introBody: "Menara Keagungan Limboto—also known as Pakaya Tower, and widely recognized in English-language sources as Limboto Tower—is a visual landmark in Kayubulan, Limboto District, the administrative centre of Gorontalo Regency, Gorontalo Province, Indonesia. Its open tower structure, archway and surrounding park make it an easy reference point for a short city visit.",
     introNote: "Source note: identity, address, ratings and visit status can change. Use the live map link before setting out.",
     sourceLink: "View place in Google Maps",
     photoCredit: "Location photo: Muh. Irfan Fikry, CC BY-SA 4.0 via Wikimedia Commons",
@@ -191,7 +208,8 @@ export const copy = {
     nearbyTitle: "Build a town route, not a shopping list.",
     nearby: [
       { title: "Public space & landmarks", body: "Taman Menara Limboto and the nearby civic streets can provide a short pause before continuing through town." },
-      { title: "Lake Limboto", body: "Lake Limboto is part of the wider Gorontalo Regency landscape and can be considered for a longer route. Check access and weather conditions." },
+      { title: "Lake Limboto", body: "When visiting Menara Keagungan Limboto, visitors can easily continue to Lake Limboto, the main natural landmark of Gorontalo Regency, as part of a wider route. Check access and weather conditions." },
+      { title: "Otanaha Fort & Gorontalo City", body: "In Gorontalo City, roughly 20 km from the tower, Otanaha Fort and the city's historic sites can be combined into a one-day route. Confirm visiting hours and access through official sources before setting out." },
       { title: "Food, shopping & road needs", body: "Within the town area, seek the type of service you need—simple eateries, daily-needs shops, ATMs, fuel or charging—without relying on business endorsements." },
       { title: "Stays", body: "Choose accommodation in Limboto or Gorontalo to fit your route. Compare location, policies and onward transport independently before booking." },
     ],
@@ -199,16 +217,22 @@ export const copy = {
     mapTitle: "Start from the correct location.",
     mapBody: "The embedded map uses the Indonesian-language view. Open Google Maps directly for live traffic, current opening status and turn-by-turn directions.",
     mapAction: "View in Google Maps",
+    mapOfficialNote:
+      "For official updates and regional tourism information, visit the official Gorontalo Provincial Government portal.",
+    mapOfficialLink: "Gorontalo Province Official Tourism Portal",
+    officialFooter: "Official Gorontalo portal",
     faqKicker: "08 / Frequently asked questions",
     faqTitle: "Brief answers to the questions visitors ask most.",
     faq: [
-      { q: "Does Menara Keagungan Limboto have another name?", a: "Some public sources and local signage also refer to it as Pakaya Tower or Menara Pakaya." },
+      { q: "Does Menara Keagungan Limboto have another name?", a: "Some public sources and local signage also refer to it as Limboto Tower, Pakaya Tower or Menara Pakaya." },
+      { q: "Where is Menara Keagungan Limboto located?", a: "The tower stands at Jl. Baso Bobihoe No.308, Kayubulan, Limboto District, Gorontalo Regency, Gorontalo 96214, Indonesia, at coordinates 0.6269984° N, 122.9773079° E." },
       { q: "What is known about the tower’s history?", a: "An Indonesian Wikipedia article records 2002 construction and a 2003 inauguration. Management and facilities continue to develop; for current context, we refer to a 2026 Gorontalo Regency Government announcement." },
       { q: "Is there an admission fee?", a: "We have not found a fixed fee in a stable public source. Please confirm directly before visiting." },
       { q: "When is a good time to visit?", a: "Morning or late afternoon are generally more comfortable outdoors. Night lighting is often mentioned in map information, but you should confirm access on the day of your visit." },
       { q: "Are toilets and parking available?", a: "Facilities and capacity can change. Use marked parking and ask on site about toilets or accessibility." },
       { q: "How do I get there by public transport?", a: "Gorontalo Province’s route page lists links to Terminal Limboto and Kayubulan. Confirm the schedule, fare, drop-off and final connection with a terminal or operator on your travel day." },
       { q: "How do I get there from the airport?", a: "From Djalaluddin Airport, continue toward Limboto by a licensed airport taxi, pre-booked transfer or hired vehicle. Confirm both the pick-up and return plan before leaving." },
+      { q: "What landmarks are around the tower?", a: "Around Menara Keagungan Limboto, visitors can continue to Lake Limboto, Otanaha Fort in Gorontalo City, and the public space of Taman Menara Limboto around the site." },
     ],
     footerTitle: "Menara Keagungan Limboto Guide",
     footerStatement: "This is an independent, nonprofit visitor-information project. It is not affiliated with any government body or official operator.",

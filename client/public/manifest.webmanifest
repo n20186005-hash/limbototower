@@ -1,0 +1,20 @@
+{
+  "name": "Menara Keagungan Limboto Guide",
+  "short_name": "Menara Limboto",
+  "description": "Panduan pengunjung independen dan bilingual untuk Menara Keagungan Limboto (Limboto Tower) di Gorontalo, Indonesia.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f5eb",
+  "theme_color": "#087E7A",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["travel", "tourism"],
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
