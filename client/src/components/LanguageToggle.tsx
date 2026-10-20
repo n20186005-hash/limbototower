@@ -1,4 +1,5 @@
 /** Tropical Civic Atlas component: compact bilingual control with civic-wayfinding clarity. */
+import React from "react";
 import { Languages } from "lucide-react";
 import type { Locale } from "@/lib/siteContent";
 
@@ -7,15 +8,16 @@ type LanguageToggleProps = {
   onToggle: () => void;
   label: string;
   shortLabel: string;
+  targetHref?: string;
 };
 
-export function LanguageToggle({ locale, onToggle, label, shortLabel }: LanguageToggleProps) {
+export function LanguageToggle({ locale, onToggle, label, shortLabel, targetHref }: LanguageToggleProps) {
   return (
-    <button className="language-toggle" type="button" onClick={onToggle} aria-label={`Switch language to ${label}`}>
+    <a className="language-toggle" href={targetHref || (locale === "id" ? "/en/" : "/")} onClick={(event) => { event.preventDefault(); onToggle(); }} aria-label={`Switch language to ${label}`}>
       <Languages size={15} strokeWidth={2.25} aria-hidden="true" />
       <span className="language-toggle__current">{locale === "id" ? "ID" : "EN"}</span>
       <span className="language-toggle__arrow">→</span>
       <span>{shortLabel}</span>
-    </button>
+    </a>
   );
 }

@@ -20,7 +20,7 @@ async function startServer() {
 
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
+    res.status(404).sendFile(path.join(staticPath, "404.html"));
   });
 
   const port = process.env.PORT || 3000;

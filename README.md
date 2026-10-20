@@ -1,33 +1,21 @@
-# Menara Keagungan Limboto Guide — Complete Website Archive
+# Limboto Tower visitor guide
 
-This archive contains a portable copy of the bilingual website, its complete source files, all supplied image assets, and a locally built production output.
+Independent Indonesian and English visitor information for Menara Keagungan Limboto / Pakaya Tower. This is not an operator or government website.
 
-## Folders
+## Local development and deployment
 
-| Folder | Contents |
-| --- | --- |
-| `website/` | Editable React/Vite source code, configuration, content research, design notes, and local copies of every image actually used by the page. |
-| `website/client/public/assets/` | The four images referenced by the website: location photograph, brand mark, illustrated tower texture, and coordinate seal. The source has been rewritten to use these local paths. |
-| `assets-original/` | All seven original static image files supplied during site creation, including source/original variants and the unused wayfinding texture. |
-| `production-build/` | A freshly built production copy created from `website/`. It contains the locally copied, deployable image assets and has no `/manus-storage/` image references. |
+Use the pinned pnpm version and Node.js. `pnpm install --frozen-lockfile`, `pnpm check`, `pnpm test`, then `pnpm build`. The build creates eight pre-rendered language/topic pages, a noindex error page, robots and sitemap under `dist/public`; generated output is ignored by this repository. `pnpm deploy` builds and invokes Wrangler. The Worker uses an ASSETS binding, canonical HTTP/www redirects preserving paths and queries, and 404 asset handling. The verified Cloudflare project is `limbototower`.
 
-## Run or rebuild locally
+## Sources and scope
 
-Install Node.js 22+ and pnpm, then run the following from `website/`:
+See [research notes](research_notes.md). Dated map hours describe a place listing, not permission to enter the tower or use a lift/observation level. Admission, upper-level access, facilities and transport availability require separate confirmation. Nearby places are candidates requiring their own checks.
 
-```bash
-pnpm install
-pnpm dev
-```
+## Images
 
-To create a fresh production build, run:
+The former Commons location photograph and its derivatives were removed from the current public tree after independent review found an unresolved deletion nomination dated 18 March 2026, concerning architecture copyright and freedom of panorama in Indonesia. The uploader’s CC BY-SA 4.0 declaration does not resolve that separate issue. Historical source: [Menara Keagungan Limboto.jpg](https://commons.wikimedia.org/wiki/File:Menara_Keagungan_Limboto.jpg), credited there to Hendrik Saleh. No disputed photograph is used in the hero, social preview or structured data. Existing guide icons and neutral CSS panels provide the visual identity instead.
 
-```bash
-pnpm build
-```
+The baseline README described the remaining PNG designs as generated custom illustrations. They remain decorative/reference design assets; they are not evidence of current tower access or facilities. No additional licence or author claim is made for those assets.
 
-## Asset attribution
+## Privacy implementation
 
-The location photograph `menara-keagungan-limboto-cc-by-sa.jpg` is credited in the website and was obtained as **Muh. Irfan Fikry, CC BY-SA 4.0 via Wikimedia Commons**. Retain this attribution and comply with the licence when redistributing or adapting the photograph.
-
-The remaining PNG illustrations are custom visual assets generated for this website. The research notes and content sources are retained in `website/research_notes.md`.
+No account, booking or contact form is provided. Google Maps and Google Fonts are external resources. Google Analytics remains disabled until consent. Cookie Settings applies refusal immediately; restricted browser storage is reported without claiming persistence in new tabs/browsers. Obsolete debugging collectors and unused template proxy/auth code have been removed.
