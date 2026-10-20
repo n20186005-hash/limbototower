@@ -53,3 +53,16 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .hero__breadcrumb { margin: 0 0 1.15rem; }.hero__breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0; padding: 0; list-style: none; }.hero__breadcrumb li { color: #557178; font-size: .62rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }.hero__breadcrumb li:first-child { color: var(--teal-deep); }.hero__breadcrumb li + li:before { content: "→"; margin-right: .45rem; color: var(--coral); font-size: .62rem; }
 .map-layout__copy .map-official { max-width: 420px; margin: 1.35rem 0 0; color: #426068; font-size: .72rem; line-height: 1.7; }.map-layout__copy .map-official a { display: inline-flex; align-items: center; gap: .2rem; color: var(--teal-deep); font-weight: 800; text-decoration: none; border-bottom: 1px solid rgba(8,126,122,.35); }.map-layout__copy .map-official a:hover { color: var(--indigo); }
 .footer-links a[target="_blank"] { display: inline-flex; align-items: center; gap: .22rem; }
+
+/* Keep long words and grid children inside their available width. */
+.atlas-shell *, .legal-page * { min-width: 0; }
+h1,h2,h3,p,a,summary { overflow-wrap: anywhere; }
+.language-toggle,.menu-button,.site-nav a,.footer-links a,.legal-back,.button { min-height:44px; }
+.language-toggle,.legal-back,.footer-links a { display:inline-flex;align-items:center; }
+.menu-button { min-width:44px; }
+.hero__photo figcaption { position:relative;left:auto;bottom:auto;padding:.8rem;background:#123842;color:#fff; }
+.hero__photo figcaption a { color:inherit;text-decoration:underline; }
+.hero__photo img { height:auto; }
+.hero__photo:after { pointer-events:none; }
+.hero__actions,.cookie-actions { flex-wrap:wrap; }
+@media(max-width:680px) { .header-actions { margin-left:auto;gap:.4rem; }.hero h1 { font-size:clamp(2.6rem,12vw,3.8rem); }.legal-article h1 { font-size:clamp(2.5rem,12vw,3.7rem); }.history-layout,.services-heading,.history-sources { grid-template-columns: minmax(0,1fr); }.site-nav { max-height:calc(100dvh - 80px);overflow-y:auto; } }

@@ -1,14 +1,13 @@
 /** Tropical Civic Atlas page: asymmetric editorial wayfinding for Menara Keagungan Limboto. */
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Accessibility, ArrowDownRight, ArrowUpRight, CarFront, ChevronDown, CloudSun, Clock3, Compass, ExternalLink,
   Fuel, MapPin, Navigation, Ticket, Timer, Utensils, Wifi, BedDouble, ShoppingBasket, BatteryCharging, BookOpenText,
 } from "lucide-react";
-import { Link } from "wouter";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { copy, govTourismUrl, mapHref, siteName, siteUrl, type Locale } from "@/lib/siteContent";
 
-const realPhoto = "/assets/menara-keagungan-limboto-cc-by-sa.jpg";
+const realPhoto = "/assets/menara-keagungan-limboto.webp";
 const abstractTower = "/assets/menara-steel-lattice-atlas.png";
 const mark = "/assets/menara-pakaya-mark.png";
 const seal = "/assets/tower-coordinate-seal.png";
@@ -25,21 +24,6 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
   const t = copy[locale];
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const setMetaTag = (selector: string, attr: string, value: string) => {
-    const el = document.head.querySelector<HTMLMetaElement>(selector);
-    if (el) el.setAttribute(attr, value);
-  };
-
-  useEffect(() => {
-    document.documentElement.lang = locale;
-    document.title = t.documentTitle;
-    setMetaTag('meta[name="description"]', "content", t.metaDescription);
-    setMetaTag('meta[property="og:title"]', "content", t.documentTitle);
-    setMetaTag('meta[property="og:description"]', "content", locale === "id" ? "Panduan pengunjung independen untuk Menara Keagungan Limboto (Limboto Tower) di Limboto, Kabupaten Gorontalo, Indonesia." : "Official-style independent visitor guide to Menara Keagungan Limboto (Limboto Tower) in Limboto, Gorontalo Regency, Indonesia.");
-    setMetaTag('meta[property="og:locale"]', "content", locale === "id" ? "id_ID" : "en_US");
-    setMetaTag('meta[property="og:locale:alternate"]', "content", locale === "id" ? "en_US" : "id_ID");
-  }, [locale, t.documentTitle, t.metaDescription]);
-
   return (
     <div className="atlas-shell">
       <a className="skip-link" href="#main-content">{locale === "id" ? "Langsung ke isi" : "Skip to content"}</a>
@@ -48,7 +32,7 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
           <img className="brand__mark" src={mark} alt="" />
           <span className="brand__words"><span>MENARA KEAGUNGAN</span><small>LIMBOTO GUIDE</small></span>
         </a>
-        <nav className={`site-nav ${menuOpen ? "site-nav--open" : ""}`} aria-label={locale === "id" ? "Navigasi utama" : "Main navigation"}>
+        <nav id="main-nav" className={`site-nav ${menuOpen ? "site-nav--open" : ""}`} aria-label={locale === "id" ? "Navigasi utama" : "Main navigation"}>
           <a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a>
           <a href="#visit" onClick={() => setMenuOpen(false)}>{t.nav.visit}</a>
           <a href="#nearby" onClick={() => setMenuOpen(false)}>{t.nav.nearby}</a>
@@ -57,7 +41,7 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
         </nav>
         <div className="header-actions">
           <LanguageToggle locale={locale} onToggle={onLocaleToggle} label={t.language} shortLabel={t.languageShort} />
-          <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-nav"><span /><span /></button>
+          <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-nav" aria-label={locale === "id" ? "Buka navigasi" : "Open navigation"}><span /><span /></button>
         </div>
       </header>
 
@@ -82,12 +66,12 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
             </div>
           </div>
           <figure className="hero__photo reveal reveal--late">
-            <img src={realPhoto} alt={locale === "id" ? "Menara Keagungan Limboto (Limboto Tower) — tampilan utama di Kayubulan, Limboto, Indonesia" : "Menara Keagungan Limboto (Limboto Tower) — main view in Kayubulan, Limboto, Indonesia"} />
-            <figcaption>{t.photoCredit}</figcaption>
+            <img src={realPhoto} alt={locale === "id" ? "Foto referensi detail Menara Keagungan Limboto pada malam hari; bukan kondisi langsung" : "Reference photograph of Limboto Tower details at night; not a live view"} />
+            <figcaption>{t.photoCredit} <a href="https://commons.wikimedia.org/wiki/File:Menara_Keagungan_Limboto.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></figcaption>
             <div className="hero__photo-badge"><MapPin size={16} /><span>{locale === "id" ? "Kayubulan · Limboto" : "Kayubulan · Limboto"}</span></div>
           </figure>
           <aside className="hero__facts" aria-label={locale === "id" ? "Ringkasan tempat" : "Place snapshot"}>
-            <div><span>{t.mapLabel}</span><strong>0.6269984° N<br />122.9773079° E</strong></div>
+            <div><span>{t.mapLabel}</span><strong>0.6269984° N<br />122.9798882° E</strong></div>
             <div><span>{t.ratingLabel}</span><strong>{t.ratingValue}<small>{t.reviewValue}</small></strong></div>
             <p>{t.updated}</p>
           </aside>
@@ -154,7 +138,7 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
 
         <section id="map" className="content-section content-section--map">
           <div className="section-rail"><span>{t.mapKicker}</span><div /></div>
-          <div className="map-layout"><div className="map-layout__copy"><p className="section-kicker">{t.mapKicker}</p><h2>{t.mapTitle}</h2><p>{t.mapBody}</p><a className="button button--filled" href={mapHref} target="_blank" rel="noreferrer"><ExternalLink size={16} /> {t.mapAction}</a><p className="map-official">{t.mapOfficialNote} <a href={govTourismUrl} target="_blank" rel="noopener noreferrer">{t.mapOfficialLink} <ArrowUpRight size={13} /></a></p></div><div className="map-frame"><iframe title={locale === "id" ? "Peta lokasi Menara Keagungan Limboto (Limboto Tower)" : "Location map of Menara Keagungan Limboto (Limboto Tower)"} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6898.647756960036!2d122.97730791243553!3d0.6269983993642414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32792b4799e5e75d%3A0xc05565aafae3154e!2sLimboto%20Tower!5e1!3m2!1sid!2sid!4v1787144975728!5m2!1sid!2sid" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div></div>
+          <div className="map-layout"><div className="map-layout__copy"><p className="section-kicker">{t.mapKicker}</p><h2>{t.mapTitle}</h2><p>{t.mapBody}</p><a className="button button--filled" href={mapHref} target="_blank" rel="noreferrer"><ExternalLink size={16} /> {t.mapAction}</a><p className="map-official">{t.mapOfficialNote} <a href={govTourismUrl} target="_blank" rel="noopener noreferrer">{t.mapOfficialLink} <ArrowUpRight size={13} /></a></p></div><div className="map-frame"><iframe title={locale === "id" ? "Peta lokasi Menara Keagungan Limboto (Limboto Tower)" : "Location map of Menara Keagungan Limboto (Limboto Tower)"} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6898.647756960036!2d122.97988821243553!3d0.6269983993642414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32792b4799e5e75d%3A0xc05565aafae3154e!2sLimboto%20Tower!5e1!3m2!1sid!2sid!4v1787144975728!5m2!1sid!2sid" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div></div>
         </section>
 
         <section id="faq" className="content-section content-section--faq">
@@ -164,7 +148,7 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-top"><div className="footer-brand"><img src={mark} alt="" /><div><h2>{t.footerTitle}</h2><p>{t.footerStatement}</p></div></div><div className="footer-links"><a href={govTourismUrl} target="_blank" rel="noopener noreferrer">{t.officialFooter} <ArrowUpRight size={12} /></a><Link href="/privacy">{t.privacy}</Link><Link href="/terms">{t.terms}</Link><Link href="/cookies">{t.cookies}</Link></div></div>
+        <div className="footer-top"><div className="footer-brand"><img src={mark} alt="" /><div><h2>{t.footerTitle}</h2><p>{t.footerStatement}</p></div></div><div className="footer-links"><a href={govTourismUrl} target="_blank" rel="noopener noreferrer">{t.officialFooter} <ArrowUpRight size={12} /></a><a href={locale === "en" ? "/en/privacy/" : "/privacy/"}>{t.privacy}</a><a href={locale === "en" ? "/en/terms/" : "/terms/"}>{t.terms}</a><a href={locale === "en" ? "/en/cookies/" : "/cookies/"}>{t.cookies}</a></div></div>
         <div className="footer-bottom"><p>{t.footerSources}</p><p>{t.footerPhoto}</p><p>{t.copyright}</p></div>
       </footer>
     </div>

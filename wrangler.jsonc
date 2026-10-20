@@ -1,15 +1,8 @@
 {
-  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
-  "name": "limbototower",
-  "compatibility_date": "2026-08-15",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "dist/public",
-    "not_found_handling": "single-page-application"
-  },
-  "build": {
-    "command": "pnpm run build"
-  }
+ "$schema":"node_modules/wrangler/config-schema.json",
+ "name":"limbototower",
+ "main":"worker.ts",
+ "compatibility_date":"2026-08-15",
+ "observability":{"enabled":true},
+ "assets":{"directory":"dist/public","binding":"ASSETS","not_found_handling":"404-page","run_worker_first":true}
 }

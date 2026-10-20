@@ -1,6 +1,6 @@
 /** Tropical Civic Atlas page: quiet legal reading space, using paper tones and a local guide voice. */
+import React, { useEffect, useState } from "react";
 import { ArrowLeft, Cookie, ShieldCheck, Scale } from "lucide-react";
-import { Link } from "wouter";
 import type { Locale } from "@/lib/siteContent";
 import { copy, legalCopy } from "@/lib/siteContent";
 import { LanguageToggle } from "@/components/LanguageToggle";
@@ -12,12 +12,15 @@ type LegalPageProps = {
   locale: Locale;
   onLocaleToggle: () => void;
   analyticsEnabled: boolean;
+  consentStatus?: string;
   onAnalyticsChange: (enabled: boolean) => void;
 };
 
 const icons = { privacy: ShieldCheck, terms: Scale, cookies: Cookie };
 
-export default function LegalPage({ kind, locale, onLocaleToggle, analyticsEnabled, onAnalyticsChange }: LegalPageProps) {
+export default function LegalPage({ kind, locale, onLocaleToggle, analyticsEnabled, onAnalyticsChange, consentStatus = "" }: LegalPageProps) {
+  const [draft, setDraft] = useState(analyticsEnabled);
+  useEffect(() => setDraft(analyticsEnabled), [analyticsEnabled]);
   const t = copy[locale];
   const document = legalCopy[locale][kind];
   const Icon = icons[kind];
@@ -25,8 +28,8 @@ export default function LegalPage({ kind, locale, onLocaleToggle, analyticsEnabl
   return (
     <main className="legal-page">
       <header className="legal-header">
-        <Link href="/" className="legal-back"><ArrowLeft size={16} /> {t.legalBack}</Link>
-        <LanguageToggle locale={locale} onToggle={onLocaleToggle} label={t.language} shortLabel={t.languageShort} />
+        <a href={locale === "en" ? "/en/" : "/"} className="legal-back"><ArrowLeft size={16} /> {t.legalBack}</a>
+        <LanguageToggle locale={locale} onToggle={onLocaleToggle} label={t.language} shortLabel={t.languageShort} targetHref={locale === "id" ? `/en/${kind}/` : `/${kind}/`} />
       </header>
       <article className="legal-article">
         <div className="legal-stamp"><Icon size={25} strokeWidth={1.6} /></div>
@@ -43,15 +46,15 @@ export default function LegalPage({ kind, locale, onLocaleToggle, analyticsEnabl
         {kind === "cookies" && (
           <section className="cookie-panel" aria-labelledby="cookie-preferences-title">
             <h2 id="cookie-preferences-title">{locale === "id" ? "Pilihan Anda" : "Your choices"}</h2>
-            <div className="cookie-row"><div><strong>{t.requiredCookie}</strong><span>{locale === "id" ? "Selalu aktif untuk fungsi inti." : "Always active for core functions."}</span></div><span className="cookie-state">{locale === "id" ? "Aktif" : "Active"}</span></div>
-            <label className="cookie-row cookie-row--toggle"><div><strong>{t.analyticsCookie}</strong><span>{locale === "id" ? "Membantu kami membaca penggunaan anonim." : "Helps us understand anonymous usage."}</span></div><input aria-label={t.analyticsCookie} type="checkbox" checked={analyticsEnabled} onChange={(event) => onAnalyticsChange(event.target.checked)} /></label>
-            <div className="cookie-row"><div><strong>{t.preferenceCookie}</strong><span>{locale === "id" ? "Menyimpan bahasa yang Anda pilih." : "Stores the language you choose."}</span></div><span className="cookie-state">{locale === "id" ? "Lokal" : "Local"}</span></div>
+            <div className="cookie-row"><div><strong>{t.requiredCookie}</strong><span>{locale === "id" ? "Halaman dapat digunakan tanpa cookie analitik." : "Pages work without analytics cookies."}</span></div><span className="cookie-state">{locale === "id" ? "Aktif" : "Active"}</span></div>
+            <label className="cookie-row cookie-row--toggle"><div><strong>{t.analyticsCookie}</strong><span>{locale === "id" ? "Pengukuran penggunaan setelah persetujuan." : "Usage measurement after consent."}</span></div><input aria-label={t.analyticsCookie} type="checkbox" checked={draft} onChange={(event) => setDraft(event.target.checked)} /></label>
+            <div className="cookie-row"><div><strong>{t.preferenceCookie}</strong><span>{locale === "id" ? "Menyimpan pilihan analitik bila tersedia." : "Stores analytics choices where available."}</span></div><span className="cookie-state">{locale === "id" ? "Lokal" : "Local"}</span></div>
             <div className="cookie-row"><div><strong>{t.marketingCookie}</strong><span>{locale === "id" ? "Tidak digunakan oleh situs ini." : "Not used by this site."}</span></div><span className="cookie-state">—</span></div>
-            <div className="cookie-actions"><button className="button button--filled" type="button" onClick={() => onAnalyticsChange(analyticsEnabled)}>{t.savePreferences}</button><button className="button button--quiet" type="button" onClick={() => onAnalyticsChange(false)}>{t.rejectAll}</button></div>
-          </section>
+            <div className="cookie-actions"><button className="button button--filled" type="button" onClick={() => onAnalyticsChange(draft)}>{t.savePreferences}</button><button className="button button--quiet" type="button" onClick={() => onAnalyticsChange(false)}>{t.rejectAll}</button></div>
+          <p role="status">{consentStatus}</p></section>
         )}
       </article>
-      <footer className="legal-footer">{t.footerStatement}</footer>
+      <footer className="legal-footer"><p>{t.footerStatement}</p><nav className="footer-links">{(["privacy", "terms", "cookies"] as const).map(page => <a key={page} href={`${locale === "en" ? "/en" : ""}/${page}/`}>{t[page]}</a>)}</nav></footer>
     </main>
   );
 }
