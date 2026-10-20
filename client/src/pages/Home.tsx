@@ -7,10 +7,9 @@ import {
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { copy, govTourismUrl, mapHref, siteName, siteUrl, type Locale } from "@/lib/siteContent";
 
-const realPhoto = "/assets/menara-keagungan-limboto.webp";
-const abstractTower = "/assets/menara-steel-lattice-atlas.png";
-const mark = "/assets/menara-pakaya-mark.png";
-const seal = "/assets/tower-coordinate-seal.png";
+const guideIdentity = "/assets/icon-512.png";
+const mark = "/assets/icon-192.png";
+const seal = "/assets/icon-192.png";
 
 const iconMap = { Clock3, Timer, Ticket, CarFront, Accessibility, CloudSun };
 const serviceIconMap = { Toilet: Accessibility, CarFront, Utensils, BedDouble, ShoppingBasket, Fuel, BatteryCharging };
@@ -66,8 +65,8 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
             </div>
           </div>
           <figure className="hero__photo reveal reveal--late">
-            <img src={realPhoto} alt={locale === "id" ? "Foto referensi detail Menara Keagungan Limboto pada malam hari; bukan kondisi langsung" : "Reference photograph of Limboto Tower details at night; not a live view"} />
-            <figcaption>{t.photoCredit} <a href="https://commons.wikimedia.org/wiki/File:Menara_Keagungan_Limboto.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a></figcaption>
+            <img src={guideIdentity} alt="" />
+            <figcaption>{t.photoCredit}</figcaption>
             <div className="hero__photo-badge"><MapPin size={16} /><span>{locale === "id" ? "Kayubulan · Limboto" : "Kayubulan · Limboto"}</span></div>
           </figure>
           <aside className="hero__facts" aria-label={locale === "id" ? "Ringkasan tempat" : "Place snapshot"}>
@@ -87,7 +86,7 @@ export default function Home({ locale, onLocaleToggle }: HomeProps) {
               <div className="source-note"><Compass size={19} /><p>{t.introNote} <a href={mapHref} target="_blank" rel="noreferrer">{t.sourceLink} <ArrowUpRight size={13} /></a></p></div>
             </div>
             <div className="intro-layout__visual" aria-hidden="true">
-              <img src={abstractTower} alt="" />
+
               <div className="intro-layout__visual-word">LIMBOTO<br />GORONTALO</div>
             </div>
           </div>

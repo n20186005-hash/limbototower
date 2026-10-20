@@ -16,7 +16,7 @@ export const copy={
     "language": "English",
     "languageShort": "EN",
     "documentTitle": "Menara Keagungan Limboto / Pakaya Tower: Lokasi & Akses",
-    "metaDescription": "Panduan Menara Keagungan Limboto (Pakaya Tower), Kayubulan, Gorontalo: alamat, peta, jam listing bertanggal dan hal yang perlu dicek untuknaik menara.",
+    "metaDescription": "Panduan Menara Keagungan Limboto (Pakaya Tower), Kayubulan, Gorontalo: alamat, peta, jam listing bertanggal dan hal yang perlu dicek untuk naik menara.",
     "breadcrumb": {
       "landmark": "Menara Keagungan Limboto",
       "city": "Limboto",
@@ -39,7 +39,7 @@ export const copy={
     "introBody": "Menara Keagungan Limboto—yang juga dikenal sebagai Pakaya Tower, dan dalam sumber berbahasa Inggris umum disebut Limboto Tower—adalah penanda visual di Kayubulan, Kecamatan Limboto, pusat pemerintahan Kabupaten Gorontalo, Provinsi Gorontalo, Indonesia. Struktur menara terbuka, gerbang di bawahnya, dan taman di sekitarnya menjadikannya tempat yang mudah dikenali untuk orientasi kota dan kunjungan singkat.",
     "introNote": "Catatan sumber: identitas, alamat, penilaian, dan status kunjungan dapat berubah. Gunakan tautan peta langsung sebelum berangkat.",
     "sourceLink": "Lihat tempat di Google Maps",
-    "photoCredit": "Hendrik Saleh · CC BY-SA 4.0 · foto referensi diubah ukuran/format; kondisi kini dapat berbeda.",
+    "photoCredit": "Ilustrasi identitas panduan; bukan foto lokasi atau bukti akses.",
     "historyKicker": "02 / Sejarah & konteks",
     "historyTitle": "Sebuah landmark yang terus mengalami penataan.",
     "historyBody": "Portal DPMPTSP Provinsi Gorontalo menyebut Menara Keagungan Limboto sebagai Pakaya Tower dengan tinggi 65 meter. Ini adalah keterangan profil daerah, bukan konfirmasi bahwa pengunjung dapat naik.",
@@ -48,7 +48,7 @@ export const copy={
       {
         "year": "2026",
         "title": "Penataan taman diberitakan",
-        "body": "Berita Pemerintah Kabupaten Gorontalo pada 14 Juni 2026 melaporkan penataan ruang terbuka dan fasilitas pendukung masih berlangsung. Berita itu tidak membuktikan seluruh pekerjaan selesai atauakses naik menara dibuka."
+        "body": "Berita Pemerintah Kabupaten Gorontalo pada 14 Juni 2026 melaporkan penataan ruang terbuka dan fasilitas pendukung masih berlangsung. Berita itu tidak membuktikan seluruh pekerjaan selesai atau akses naik menara dibuka."
       },
       {
         "year": "19 Oct",
@@ -75,7 +75,7 @@ export const copy={
       {
         "icon": "Clock3",
         "label": "Waktu terbaik",
-        "title": "Listing 24 jam ≠ aksesnaik",
+        "title": "Listing 24 jam ≠ akses naik",
         "body": "Pada 19 Oktober 2026, Google Maps menampilkan buka 24 jam setiap hari. Ini hanya snapshot listing landmark/kawasan, bukan jadwal pasti akses bagian dalam atau layanan."
       },
       {
@@ -88,7 +88,7 @@ export const copy={
         "icon": "Ticket",
         "label": "Tiket / biaya",
         "title": "Konfirmasi di lokasi",
-        "body": "Tarif masuk kawasan,naik menara, lift, dan parkir belum kami verifikasi. Tanyakan biaya masing-masing sebelum membayar."
+        "body": "Tarif masuk kawasan, naik menara, lift, dan parkir belum kami verifikasi. Tanyakan biaya masing-masing sebelum membayar."
       },
       {
         "icon": "CarFront",
@@ -218,11 +218,11 @@ export const copy={
       },
       {
         "q": "Apa yang diketahui tentang sejarah menara?",
-        "a": "Portal DPMPTSP Provinsi Gorontalo menyebut Menara Keagungan Limboto sebagai Pakaya Tower dengan tinggi 65 meter. Ini adalah keterangan profil daerah, bukan konfirmasi bahwa pengunjung dapat naik. Berita Pemerintah Kabupaten Gorontalo pada 14 Juni 2026 melaporkan penataan ruang terbuka dan fasilitas pendukung masih berlangsung. Berita itu tidak membuktikan seluruh pekerjaan selesai atauakses naik menara dibuka."
+        "a": "Portal DPMPTSP Provinsi Gorontalo menyebut Menara Keagungan Limboto sebagai Pakaya Tower dengan tinggi 65 meter. Ini adalah keterangan profil daerah, bukan konfirmasi bahwa pengunjung dapat naik. Berita Pemerintah Kabupaten Gorontalo pada 14 Juni 2026 melaporkan penataan ruang terbuka dan fasilitas pendukung masih berlangsung. Berita itu tidak membuktikan seluruh pekerjaan selesai atau akses naik menara dibuka."
       },
       {
         "q": "Apakah ada biaya masuk?",
-        "a": "Tarif masuk kawasan,naik menara, lift, dan parkir belum kami verifikasi. Tanyakan biaya masing-masing sebelum membayar."
+        "a": "Tarif masuk kawasan, naik menara, lift, dan parkir belum kami verifikasi. Tanyakan biaya masing-masing sebelum membayar."
       },
       {
         "q": "Apakah menara buka 24 jam dan bisa dinaiki?",
@@ -248,7 +248,7 @@ export const copy={
     "footerTitle": "Menara Keagungan Limboto Guide",
     "footerStatement": "Situs ini adalah proyek panduan pengunjung independen dan nirlaba; situs ini tidak berafiliasi dengan lembaga pemerintah atau pengelola resmi mana pun.",
     "footerSources": "Sumber: snapshot Google Maps 19 Oktober 2026, berita Pemerintah Kabupaten Gorontalo dan profil DPMPTSP Provinsi Gorontalo. Tautan sumber tersedia di atas.",
-    "footerPhoto": "Hak cipta foto tetap menjadi milik fotografer masing-masing.",
+    "footerPhoto": "Ilustrasi merupakan identitas panduan, bukan dokumentasi kondisi lokasi.",
     "privacy": "Kebijakan Privasi",
     "terms": "Syarat Layanan",
     "cookies": "Pengaturan Cookie",
@@ -296,7 +296,7 @@ export const copy={
     "introBody": "Menara Keagungan Limboto—also known as Pakaya Tower, and widely recognized in English-language sources as Limboto Tower—is a visual landmark in Kayubulan, Limboto District, the administrative centre of Gorontalo Regency, Gorontalo Province, Indonesia. Its open tower structure, archway and surrounding park make it an easy reference point for a short city visit.",
     "introNote": "Source note: identity, address, ratings and visit status can change. Use the live map link before setting out.",
     "sourceLink": "View place in Google Maps",
-    "photoCredit": "Hendrik Saleh · CC BY-SA 4.0 · reference photograph, resized/re-encoded; current conditions may differ.",
+    "photoCredit": "Guide identity illustration; not a site photograph or evidence of access.",
     "historyKicker": "02 / History & context",
     "historyTitle": "A landmark still being shaped.",
     "historyBody": "Gorontalo Province’s DPMPTSP regional profile identifies Menara Keagungan Limboto as Pakaya Tower and describes a height of 65 metres. This profile does not confirm visitor access to upper levels.",
@@ -505,7 +505,7 @@ export const copy={
     "footerTitle": "Menara Keagungan Limboto Guide",
     "footerStatement": "This is an independent, nonprofit visitor-information project. It is not affiliated with any government body or official operator.",
     "footerSources": "Sources: Google Maps snapshot dated 19 October 2026, Gorontalo Regency news and the Gorontalo Province DPMPTSP profile. Source links appear above.",
-    "footerPhoto": "Image copyright remains with the respective photographers.",
+    "footerPhoto": "Illustrations identify the guide and do not document current site conditions.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Settings",

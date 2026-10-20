@@ -12,7 +12,7 @@ See [research notes](research_notes.md). Dated map hours describe a place listin
 
 ## Images
 
-The existing location JPEG is byte-identical to [Menara Keagungan Limboto.jpg](https://commons.wikimedia.org/wiki/File:Menara_Keagungan_Limboto.jpg), attributed there to **Hendrik Saleh**, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The former repository attribution to Muh. Irfan Fikry was incorrect. The hero and social preview use an aspect-preserving 1920-pixel WebP derivative, resized/re-encoded from that source, with CSS crop/colour treatment under the same licence. The large source JPEG is not included in public build assets. Current conditions may differ. The Commons description displayed a deletion nomination on 19 October 2026; this check does not resolve that nomination or independently establish ownership.
+The former Commons location photograph and its derivatives were removed from the current public tree after independent review found an unresolved deletion nomination dated 18 March 2026, concerning architecture copyright and freedom of panorama in Indonesia. The uploader’s CC BY-SA 4.0 declaration does not resolve that separate issue. Historical source: [Menara Keagungan Limboto.jpg](https://commons.wikimedia.org/wiki/File:Menara_Keagungan_Limboto.jpg), credited there to Hendrik Saleh. No disputed photograph is used in the hero, social preview or structured data. Existing guide icons and neutral CSS panels provide the visual identity instead.
 
 The baseline README described the remaining PNG designs as generated custom illustrations. They remain decorative/reference design assets; they are not evidence of current tower access or facilities. No additional licence or author claim is made for those assets.
 
