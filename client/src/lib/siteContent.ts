@@ -258,7 +258,7 @@ export const copy={
     "savePreferences": "Simpan preferensi",
     "rejectAll": "Tolak semua",
     "requiredCookie": "Fungsi dasar situs",
-    "analyticsCookie": "Cookie analitik",
+    "analyticsCookie": "Google Analytics",
     "preferenceCookie": "Cookie preferensi",
     "marketingCookie": "Cookie pemasaran"
   },
@@ -515,7 +515,7 @@ export const copy={
     "savePreferences": "Save preferences",
     "rejectAll": "Reject all",
     "requiredCookie": "Core site functions",
-    "analyticsCookie": "Analytics cookies",
+    "analyticsCookie": "Google Analytics",
     "preferenceCookie": "Preference cookies",
     "marketingCookie": "Marketing cookies"
   }
@@ -525,11 +525,15 @@ export const legalCopy={
   "id": {
     "privacy": {
       "title": "Kebijakan Privasi",
-      "lead": "Diperbarui: 19 Oktober 2026",
+      "lead": "Diperbarui: 21 Oktober 2026",
       "sections": [
         [
           "Data teknis",
           "Penyedia hosting menerima data permintaan seperti alamat IP dan informasi browser saat melayani halaman. Situs ini tidak menyediakan formulir kontak, akun atau pemesanan."
+        ],
+        [
+          "Pengukuran kinerja hosting",
+          "Penyedia hosting dapat menambahkan Cloudflare Web Analytics untuk tampilan halaman dan kinerja pemuatan melalui beacon browser. Pengukuran ini terpisah dari Google Analytics dan tidak dikendalikan oleh pengaturan Google Analytics. Keberadaan skrip saja tidak membuktikan pengiriman data pengukuran."
         ],
         [
           "Layanan Google",
@@ -537,7 +541,7 @@ export const legalCopy={
         ],
         [
           "Pilihan analitik",
-          "Pilihan disimpan di browser bila penyimpanan tersedia. Penolakan mematikan analitik pada halaman saat ini; bila penyimpanan gagal, pesan menjelaskan keterbatasannya. Lihat Pengaturan Cookie untuk mengubah pilihan."
+          "Pilihan Google Analytics disimpan di browser bila penyimpanan tersedia. Penolakan langsung menonaktifkan Google Analytics; pesan menjelaskan apakah penolakan tersimpan atau hanya berlaku di tab/halaman ini. Jika penyimpanan sesi tidak dapat dibaca, Google Analytics tetap nonaktif. Lihat Pengaturan Cookie untuk mengubah pilihan."
         ]
       ]
     },
@@ -565,11 +569,11 @@ export const legalCopy={
     },
     "cookies": {
       "title": "Pengaturan Cookie",
-      "lead": "Diperbarui: 19 Oktober 2026",
+      "lead": "Diperbarui: 21 Oktober 2026",
       "sections": [
         [
           "Cara kerja pilihan",
-          "Situs menggunakan penyimpanan browser untuk pilihan analitik, bukan pilihan bahasa. Bahasa memiliki URL masing-masing. Analitik Google dinonaktifkan sampai ada persetujuan. Tidak ada pelacak pemasaran yang dipasang oleh situs."
+          "Pengaturan ini hanya mengendalikan Google Analytics. Penyedia hosting dapat mengukur tampilan halaman dan kinerja pemuatan secara terpisah melalui Cloudflare Web Analytics; pilihan ini tidak menonaktifkan pengukuran tersebut. Situs menggunakan penyimpanan browser untuk pilihan Google Analytics, bukan pilihan bahasa. Bahasa memiliki URL masing-masing. Google Analytics dinonaktifkan sampai ada persetujuan. Tidak ada pelacak pemasaran yang dipasang oleh situs."
         ],
         [
           "Penyimpanan dibatasi",
@@ -581,11 +585,15 @@ export const legalCopy={
   "en": {
     "privacy": {
       "title": "Privacy Policy",
-      "lead": "Updated: 19 October 2026",
+      "lead": "Updated: 21 October 2026",
       "sections": [
         [
           "Technical data",
           "The hosting provider receives request data such as IP address and browser information when serving pages. This site has no contact form, account or booking interface."
+        ],
+        [
+          "Hosting performance measurement",
+          "The hosting provider may add Cloudflare Web Analytics for page views and loading performance through a browser beacon. This operates separately from Google Analytics and is not controlled by the Google Analytics setting. Script presence alone does not establish that measurement data was delivered."
         ],
         [
           "Google services",
@@ -593,7 +601,7 @@ export const legalCopy={
         ],
         [
           "Analytics choices",
-          "Choices are stored in your browser when storage is available. Refusal disables analytics on the current page; a message explains any storage failure. Use Cookie Settings to change your choice."
+          "Google Analytics choices are stored in your browser when storage is available. Refusal disables Google Analytics immediately; a message explains whether refusal is saved or applies only in this tab/page. If session storage cannot be read, Google Analytics stays off. Use Cookie Settings to change your choice."
         ]
       ]
     },
@@ -621,11 +629,11 @@ export const legalCopy={
     },
     "cookies": {
       "title": "Cookie Settings",
-      "lead": "Updated: 19 October 2026",
+      "lead": "Updated: 21 October 2026",
       "sections": [
         [
           "How choices work",
-          "The site uses browser storage for analytics choices, not language selection. Each language has its own URL. Google Analytics stays disabled until consent. The site installs no marketing tracker."
+          "This setting controls Google Analytics only. The hosting provider may separately measure page views and loading performance through Cloudflare Web Analytics; this choice does not switch that measurement off. The site uses browser storage for Google Analytics choices, not language selection. Each language has its own URL. Google Analytics stays disabled until consent. The site installs no marketing tracker."
         ],
         [
           "Restricted storage",

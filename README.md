@@ -18,4 +18,4 @@ The baseline README described the remaining PNG designs as generated custom illu
 
 ## Privacy implementation
 
-No account, booking or contact form is provided. Google Maps and Google Fonts are external resources. Google Analytics remains disabled until consent. Cookie Settings applies refusal immediately; restricted browser storage is reported without claiming persistence in new tabs/browsers. Obsolete debugging collectors and unused template proxy/auth code have been removed.
+No account, booking or contact form is provided. Google Maps and Google Fonts are external resources. Google Analytics remains disabled until consent. Cookie Settings controls Google Analytics only; Cloudflare hosting page-view/loading-performance measurement is separately disclosed in both languages. It applies refusal immediately; restricted browser storage is reported without claiming persistence in new tabs/browsers. Obsolete debugging collectors and unused template proxy/auth code have been removed.

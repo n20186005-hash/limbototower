@@ -13,7 +13,7 @@ type LegalPageProps = {
   onLocaleToggle: () => void;
   analyticsEnabled: boolean;
   consentStatus?: string;
-  onAnalyticsChange: (enabled: boolean) => void;
+  onAnalyticsChange: (enabled: boolean) => boolean;
 };
 
 const icons = { privacy: ShieldCheck, terms: Scale, cookies: Cookie };
@@ -43,6 +43,7 @@ export default function LegalPage({ kind, locale, onLocaleToggle, analyticsEnabl
             <p>{body}</p>
           </section>
         ))}
+        {kind !== "terms" && <p><a href="https://developers.cloudflare.com/web-analytics/about/">{locale === "id" ? "Dokumentasi Cloudflare Web Analytics" : "Cloudflare Web Analytics documentation"}</a></p>}
         {kind === "cookies" && (
           <section className="cookie-panel" aria-labelledby="cookie-preferences-title">
             <h2 id="cookie-preferences-title">{locale === "id" ? "Pilihan Anda" : "Your choices"}</h2>
@@ -50,7 +51,7 @@ export default function LegalPage({ kind, locale, onLocaleToggle, analyticsEnabl
             <label className="cookie-row cookie-row--toggle"><div><strong>{t.analyticsCookie}</strong><span>{locale === "id" ? "Pengukuran penggunaan setelah persetujuan." : "Usage measurement after consent."}</span></div><input aria-label={t.analyticsCookie} type="checkbox" checked={draft} onChange={(event) => setDraft(event.target.checked)} /></label>
             <div className="cookie-row"><div><strong>{t.preferenceCookie}</strong><span>{locale === "id" ? "Menyimpan pilihan analitik bila tersedia." : "Stores analytics choices where available."}</span></div><span className="cookie-state">{locale === "id" ? "Lokal" : "Local"}</span></div>
             <div className="cookie-row"><div><strong>{t.marketingCookie}</strong><span>{locale === "id" ? "Tidak digunakan oleh situs ini." : "Not used by this site."}</span></div><span className="cookie-state">—</span></div>
-            <div className="cookie-actions"><button className="button button--filled" type="button" onClick={() => onAnalyticsChange(draft)}>{t.savePreferences}</button><button className="button button--quiet" type="button" onClick={() => onAnalyticsChange(false)}>{t.rejectAll}</button></div>
+            <div className="cookie-actions"><button className="button button--filled" type="button" onClick={() => setDraft(onAnalyticsChange(draft))}>{t.savePreferences}</button><button className="button button--quiet" type="button" onClick={() => setDraft(onAnalyticsChange(false))}>{t.rejectAll}</button></div>
           <p role="status">{consentStatus}</p></section>
         )}
       </article>
